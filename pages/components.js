@@ -33,18 +33,19 @@ import styles from "assets/jss/nextjs-material-kit/pages/components.js";
 const useStyles = makeStyles(styles);
 
 export default function Components(props) {
+  const brand = "UNSW ASEAN society"
   const classes = useStyles();
   const { ...rest } = props;
   return (
     <div>
       <Header
-        brand="NextJS Material Kit"
+        brand={brand}
         rightLinks={<HeaderLinks />}
         fixed
         color="transparent"
         changeColorOnScroll={{
           height: 400,
-          color: "white"
+          color: "white",
         }}
         {...rest}
       />
@@ -53,7 +54,7 @@ export default function Components(props) {
           <GridContainer>
             <GridItem>
               <div className={classes.brand}>
-                <h1 className={classes.title}>NextJS Material Kit.</h1>
+                <h1 className={classes.title}>{brand}.</h1>
                 <h3 className={classes.subtitle}>
                   A Badass Material Kit based on Material-UI and NextJS.
                 </h3>
@@ -86,6 +87,7 @@ export default function Components(props) {
         <SectionExamples />
         <SectionDownload />
       </div>
+
       <Footer />
     </div>
   );

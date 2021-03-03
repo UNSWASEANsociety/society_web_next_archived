@@ -26,7 +26,7 @@ export default function HeaderLinks(props) {
   const classes = useStyles();
   return (
     <List className={classes.list}>
-      <ListItem className={classes.listItem}>
+      {/* <ListItem className={classes.listItem}>
         <CustomDropdown
           noLiPadding
           navDropdown
@@ -49,20 +49,25 @@ export default function HeaderLinks(props) {
             </a>
           ]}
         />
+      </ListItem> */}
+
+      <ListItem className={classes.listItem}>
+        <Link href="/about">
+          <Button
+            color="transparent"
+            target="_blank"
+            className={classes.navLink}
+          >
+            <CloudDownload className={classes.icons} /> About
+          </Button>
+          {/* <a className={classes.dropdownLink}>
+            {" "}
+            About
+          </a> */}
+        </Link>
       </ListItem>
       <ListItem className={classes.listItem}>
         <Button
-          href="https://www.creative-tim.com/product/nextjs-material-kit-pro?ref=njsmk-navbar"
-          color="transparent"
-          target="_blank"
-          className={classes.navLink}
-        >
-          <Icon className={classes.icons}>unarchive</Icon> Upgrade to PRO
-        </Button>
-      </ListItem>
-      <ListItem className={classes.listItem}>
-        <Button
-          href="https://www.creative-tim.com/product/nextjs-material-kit?ref=njsmk-navbar"
           color="transparent"
           target="_blank"
           className={classes.navLink}
