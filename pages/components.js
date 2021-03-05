@@ -22,11 +22,9 @@ import SectionDownload from "pages-sections/Components-Sections/SectionDownload.
 import SectionExamples from "pages-sections/Components-Sections/SectionExamples.js";
 import SectionJavascript from "pages-sections/Components-Sections/SectionJavascript.js";
 import SectionLogin from "pages-sections/Components-Sections/SectionLogin.js";
-import SectionNavbars from "pages-sections/Components-Sections/SectionNavbars.js";
 import SectionNotifications from "pages-sections/Components-Sections/SectionNotifications.js";
 import SectionPills from "pages-sections/Components-Sections/SectionPills.js";
 import SectionTabs from "pages-sections/Components-Sections/SectionTabs.js";
-import SectionTypography from "pages-sections/Components-Sections/SectionTypography.js";
 import React from "react";
 
 
@@ -66,11 +64,9 @@ export default function Components(props) {
 
       <div className={classNames(classes.main, classes.mainRaised)}>
         <SectionBasics />
-        <SectionNavbars />
         <SectionTabs />
         <SectionPills />
         <SectionNotifications />
-        <SectionTypography />
         <SectionJavascript />
         <SectionCarousel />
         <SectionCompletedExamples />
