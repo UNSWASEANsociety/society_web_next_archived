@@ -14,6 +14,7 @@ import Parallax from "components/Parallax/Parallax.js";
 // sections for this page
 import SectionBasics from "pages-sections/Components-Sections/SectionBasics.js";
 import React from "react";
+import TeamSection from "../pages-sections/LandingPage-Sections/TeamSection";
 
 const useStyles = makeStyles(styles);
 
@@ -46,9 +47,9 @@ export default function Index(props) {
             <GridItem>
               <div className={classes.brand}>
                 <h1 className={classes.title}>{brand}.</h1>
-                {/* <h3 className={classes.subtitle}>
+                <h3 className={classes.subtitle}>
                   A Badass Material Kit based on Material-UI and NextJS.
-                </h3> */}
+                </h3>
               </div>
             </GridItem>
           </GridContainer>
@@ -56,7 +57,7 @@ export default function Index(props) {
       </Parallax>
 
       <div className={classNames(classes.main, classes.mainRaised)}>
-        <SectionBasics />
+        <TeamSection />
       </div>
       <Footer />
     </div>

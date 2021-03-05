@@ -15,16 +15,11 @@ import Parallax from "components/Parallax/Parallax.js";
 import SectionBasics from "pages-sections/Components-Sections/SectionBasics.js";
 import React from "react";
 
+
 const useStyles = makeStyles(styles);
 
-export default function Index(props) {
-  const brand = "UNSW ASEAN society";
-  // (
-  //   <>
-  //     <img src={require("assets/img/apple-icon.png")} />
-      
-  //   </>
-  // );
+export default function About(props) {
+  const brand = "UNSW ASEAN society"
   const classes = useStyles();
   const { ...rest } = props;
   return (
@@ -46,9 +41,9 @@ export default function Index(props) {
             <GridItem>
               <div className={classes.brand}>
                 <h1 className={classes.title}>{brand}.</h1>
-                {/* <h3 className={classes.subtitle}>
-                  A Badass Material Kit based on Material-UI and NextJS.
-                </h3> */}
+                <h3 className={classes.subtitle}>
+                  The abouts page
+                </h3>
               </div>
             </GridItem>
           </GridContainer>
@@ -57,7 +52,10 @@ export default function Index(props) {
 
       <div className={classNames(classes.main, classes.mainRaised)}>
         <SectionBasics />
+
       </div>
+
+
       <Footer />
     </div>
   );
