@@ -12,7 +12,7 @@ const EmbeddedPlayer = ({ videoId }) => {
     };
     const onReady = (event) => {
         // access to player in all event handlers via event.target
-        event.target.pauseVideo();
+        // event.target.pauseVideo();
     };
     
     return <YouTube videoId={videoId} opts={opts} onReady={onReady} />;

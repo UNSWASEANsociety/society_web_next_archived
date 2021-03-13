@@ -24,6 +24,7 @@ import React from "react";
 import content from '../../assets/content/homepage/ceo';
 
 import EmbeddedPlayer from '../../components/Youtube/EmbeddedPlayer';
+import FadeIn from '../../components/ScrollAnimations/FadeIn';
 
 const {
   ceoImage,
@@ -68,56 +69,62 @@ export default function SectionBasics() {
         </div>
         <hr />
 
-        <GridContainer>
-          <GridItem xs={12} sm={4} md={4} lg={3}>
-            <h3>A message from our CEO:</h3>
-            <Paper variant="outlined">
-              <img src={ceoImage} />
-            </Paper>
-          </GridItem>
-          <GridItem xs={12} sm={8} md={8} lg={8}>
-            <h3>
-              Anthony Paulo Sunjaya
-            </h3>
-            {/* TODO: Take this out to a markdown file */}
-            <div>
-              It is my pleasure to welcome you to the UNSW ASEAN CONFERENCE 2020. The Conference aims to amalgamate socio-cultural, political and, economic interests all under one roof, whilst actively collaborating with the Australian and ASEAN youth from 10 different countries. 
 
-              The ultimate objective of the conference is to not only embolden and strengthen the ASEAN identity, but also empower and encourage the ASEAN-Australasian youth to more proactively engage, in the increasingly important and mutually beneficial future of the trans-international and transdisciplinary exchange of knowledge.
+        <FadeIn>
+          <GridContainer>
+            <GridItem xs={12} sm={4} md={4} lg={3}>
+              <h3>A message from our CEO:</h3>
+              <Paper variant="outlined">
+                <img src={ceoImage} />
+              </Paper>
+            </GridItem>
+            <GridItem xs={12} sm={8} md={8} lg={8}>
+              <h3>
+                Anthony Paulo Sunjaya
+              </h3>
+              {/* TODO: Take this out to a markdown file */}
+              <div>
+                It is my pleasure to welcome you to the UNSW ASEAN CONFERENCE 2020. The Conference aims to amalgamate socio-cultural, political and, economic interests all under one roof, whilst actively collaborating with the Australian and ASEAN youth from 10 different countries. 
 
-              The Conference spread over 3 days will present over 40 outstanding speakers from former Prime Ministers, Ministers, CEOs, academics to activists talking about issues that matter to ASEAN and globally today.
+                The ultimate objective of the conference is to not only embolden and strengthen the ASEAN identity, but also empower and encourage the ASEAN-Australasian youth to more proactively engage, in the increasingly important and mutually beneficial future of the trans-international and transdisciplinary exchange of knowledge.
 
-              With a wide variety of topics to look forward to from Social Entrepreneurship, Human Rights, Cybersecurity, Climate Change, Women Empowerment to Impacts of COVID-19, there's certainly a topic for you. We look forward to seeing you all on the 10th, 17th and 24th of October 2020.
-            </div>
-          </GridItem>
-        </GridContainer>
+                The Conference spread over 3 days will present over 40 outstanding speakers from former Prime Ministers, Ministers, CEOs, academics to activists talking about issues that matter to ASEAN and globally today.
 
-        <EmbeddedPlayer videoId="yiYLijzTb5Q" />
+                With a wide variety of topics to look forward to from Social Entrepreneurship, Human Rights, Cybersecurity, Climate Change, Women Empowerment to Impacts of COVID-19, there's certainly a topic for you. We look forward to seeing you all on the 10th, 17th and 24th of October 2020.
+              </div>
+            </GridItem>
+          </GridContainer>
+        </FadeIn>
 
+        <FadeIn>
+          <EmbeddedPlayer videoId="yiYLijzTb5Q" />
+        </FadeIn>
 
-        <GridContainer>
-          <GridItem xs={12} sm={4} md={4} lg={3}>
-            <h3>Vision</h3>
-            <div>
-              Inspiring the Present. Envisioning the Future of ASEAN, Australia and global relations.
-            </div>
-            <div>
-              Download our handbook for free!
-            </div>
-          </GridItem>
-          <GridItem xs={12} sm={8} md={8} lg={8}>
-            <h3>
-              Mission
-            </h3>
-            {/* TODO: Take this out to a markdown file */}
-            <div>
-              The Conference aims to bring together over 2000 participants from ASEAN, Australia and globally to connect and discuss possible solutions about issues that matter to ASEAN and globally today including our joint future beyond the COVID-19 pandemic.  
-            </div>
-            <Button variant="contained" color="primary">
-              Download Handbook
-            </Button>
-          </GridItem>
-        </GridContainer>
+        <FadeIn>
+          <GridContainer>
+            <GridItem xs={12} sm={4} md={4} lg={3}>
+              <h3>Vision</h3>
+              <div>
+                Inspiring the Present. Envisioning the Future of ASEAN, Australia and global relations.
+              </div>
+              <div>
+                Download our handbook for free!
+              </div>
+            </GridItem>
+            <GridItem xs={12} sm={8} md={8} lg={8}>
+              <h3>
+                Mission
+              </h3>
+              {/* TODO: Take this out to a markdown file */}
+              <div>
+                The Conference aims to bring together over 2000 participants from ASEAN, Australia and globally to connect and discuss possible solutions about issues that matter to ASEAN and globally today including our joint future beyond the COVID-19 pandemic.  
+              </div>
+              <Button variant="contained" color="primary">
+                Download Handbook
+              </Button>
+            </GridItem>
+          </GridContainer>
+        </FadeIn>
       </div>
     </div>
   );
