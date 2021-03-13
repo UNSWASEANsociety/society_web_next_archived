@@ -12,8 +12,9 @@ import Header from "components/Header/Header.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
 import Parallax from "components/Parallax/Parallax.js";
 // sections for this page
-import SectionBasics from "pages-sections/Components-Sections/SectionBasics.js";
 import React from "react";
+import HomepageSection from '../pages-sections/Homepage-Section/HomepageSection';
+
 
 const useStyles = makeStyles(styles);
 
@@ -56,7 +57,7 @@ export default function Index(props) {
       </Parallax>
 
       <div className={classNames(classes.main, classes.mainRaised)}>
-        <SectionBasics />
+        <HomepageSection />
       </div>
       <Footer />
     </div>
