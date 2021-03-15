@@ -23,6 +23,7 @@ import React from "react";
 // import custom from "assets/jss/Homepage/styles.js";
 import content from '../../assets/content/homepage/ceo';
 
+import Link from 'next/link';
 import EmbeddedPlayer from '../../components/Youtube/EmbeddedPlayer';
 import FadeIn from '../../components/ScrollAnimations/FadeIn';
 
@@ -49,9 +50,27 @@ export default function SectionBasics() {
     }
     setChecked(newChecked);
   };
+
+  // Styles
+  const padded = {
+    "padding": "20px"
+  };
+  const textCenter = {
+    "text-align": "center"
+  };
+  // const 
+
   return (
     <div className={classes.sections}>
       <div className={classes.container}>
+
+        <Link href="/CulturalImmersion">
+          <a>
+            <strong>
+              Cultural immersion
+            </strong>
+          </a>
+        </Link>
 
         {/* Slogan banner */}
         <div className={`${classes.sloganSection} ${classes.textCentered}`}>
@@ -72,24 +91,26 @@ export default function SectionBasics() {
 
         <FadeIn>
           <GridContainer>
-            <GridItem xs={12} sm={4} md={4} lg={3}>
-              <h3>A message from our CEO:</h3>
-              <Paper variant="outlined">
-                <img src={ceoImage} />
-              </Paper>
+            <GridItem sm={4} md={4} lg={3} style={padded}>
+              <h3 style={textCenter}>A message from our CEO:</h3>
+              <img src={ceoImage} />
             </GridItem>
-            <GridItem xs={12} sm={8} md={8} lg={8}>
-              <h3>
+            <GridItem sm={8} md={8} lg={8} style={padded}>
+              <h3 style={textCenter}>
                 Anthony Paulo Sunjaya
               </h3>
               {/* TODO: Take this out to a markdown file */}
-              <div>
+              <div style={padded}>
                 It is my pleasure to welcome you to the UNSW ASEAN CONFERENCE 2020. The Conference aims to amalgamate socio-cultural, political and, economic interests all under one roof, whilst actively collaborating with the Australian and ASEAN youth from 10 different countries. 
-
+              </div>
+              <div style={padded}>
                 The ultimate objective of the conference is to not only embolden and strengthen the ASEAN identity, but also empower and encourage the ASEAN-Australasian youth to more proactively engage, in the increasingly important and mutually beneficial future of the trans-international and transdisciplinary exchange of knowledge.
+              </div>
 
+              <div style={padded}>
                 The Conference spread over 3 days will present over 40 outstanding speakers from former Prime Ministers, Ministers, CEOs, academics to activists talking about issues that matter to ASEAN and globally today.
-
+              </div>
+              <div style={padded}>
                 With a wide variety of topics to look forward to from Social Entrepreneurship, Human Rights, Cybersecurity, Climate Change, Women Empowerment to Impacts of COVID-19, there's certainly a topic for you. We look forward to seeing you all on the 10th, 17th and 24th of October 2020.
               </div>
             </GridItem>
@@ -97,7 +118,7 @@ export default function SectionBasics() {
         </FadeIn>
 
         <FadeIn>
-          <EmbeddedPlayer videoId="yiYLijzTb5Q" />
+          <EmbeddedPlayer style={{"display": "block", "margin": "0 auto"}} videoId="yiYLijzTb5Q" />
         </FadeIn>
 
         <FadeIn>
